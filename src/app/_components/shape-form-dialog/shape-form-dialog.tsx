@@ -32,12 +32,14 @@ export const ShapeFormDialog = ({
   return (
     <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
       <DialogTrigger asChild>
-        <Button onClick={() => setIsDialogOpen(true)}>Set Shape Values</Button>
+        <Button onClick={() => setIsDialogOpen(true)}>
+          Set Roof and Panel values
+        </Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
           <DialogTitle className="flex flex-row justify-center">
-            Select shape and dimensions
+            Select roof and panels dimensions
           </DialogTitle>
           <DialogDescription asChild>
             <div className="flex flex-row justify-center mt-4">

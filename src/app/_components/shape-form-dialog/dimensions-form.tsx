@@ -37,7 +37,7 @@ export const DimensionsForm = ({
         <div>
           <div className="flex flex-row justify-center">
             <h4 className="text-lg font-bold text-center">
-              Container Dimensions <br /> (Width x Height)
+              Roof Dimensions <br /> (Width x Height)
             </h4>
           </div>
           <div className="flex flex-row justify-between mt-2 gap-4">
@@ -70,7 +70,7 @@ export const DimensionsForm = ({
         <div>
           <div className="flex flex-row justify-center">
             <h4 className="text-lg font-bold text-center">
-              Rectangle Dimensions <br /> (Width x Height)
+              Solar Panel Dimensions <br /> (Width x Height)
             </h4>
           </div>
           <div className="flex flex-row justify-between mt-2 gap-4">
@@ -103,7 +103,7 @@ export const DimensionsForm = ({
         <p>{form.formState.errors.root?.message}</p>
         <div className="flex flex-row justify-center">
           <Button type="submit" className="w-full">
-            Generate rectangles
+            Generate solar panels
           </Button>
         </div>
       </form>
