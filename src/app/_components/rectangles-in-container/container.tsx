@@ -15,7 +15,7 @@ export const Container = ({ children, shape, dimensions }: ContainerProps) => {
     return (
       <div
         style={{ width: `${width * 20}px`, height: `${height * 20}px` }}
-        className={"box-content border-4 border-black"}
+        className={"box-content border-4 bg-muted border-black"}
       >
         {children}
       </div>
@@ -25,8 +25,12 @@ export const Container = ({ children, shape, dimensions }: ContainerProps) => {
   const renderTriangle = (): ReactNode => {
     return (
       <div
-        style={{ width: `${width * 20}px`, height: `${height * 20}px` }}
-        className={"box-content border-4 border-black"}
+        style={{
+          width: `${width * 20}px`,
+          height: `${height * 20}px`,
+          clipPath: "polygon(0% 100%, 50% 0%, 100% 100%)",
+        }}
+        className="bg-muted"
       >
         {children}
       </div>
