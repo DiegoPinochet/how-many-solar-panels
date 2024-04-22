@@ -23,7 +23,14 @@ export const Container = ({ children, shape, dimensions }: ContainerProps) => {
   };
 
   const renderTriangle = (): ReactNode => {
-    return <></>;
+    return (
+      <div
+        style={{ width: `${width * 20}px`, height: `${height * 20}px` }}
+        className={"box-content border-4 border-black"}
+      >
+        {children}
+      </div>
+    );
   };
 
   return <>{shape === "rectangle" ? renderRectangle() : renderTriangle()}</>;
