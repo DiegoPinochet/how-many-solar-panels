@@ -28,19 +28,6 @@ export const DimensionsForm = ({
     setIsDialogOpen(false);
   };
 
-  const renderFormErrors = () => {
-    return (
-      <>
-        <span>{form.formState.errors.containerWidth?.message}</span>
-        <span>{form.formState.errors.containerHeight?.message}</span>
-        <span>{form.formState.errors.rectangleWidth?.message}</span>
-        <span>{form.formState.errors.rectangleHeight?.message}</span>
-      </>
-    );
-  };
-
-  console.log(form.formState.errors);
-
   return (
     <Form {...form}>
       <form
@@ -113,6 +100,7 @@ export const DimensionsForm = ({
             />
           </div>
         </div>
+        <p>{form.formState.errors.root?.message}</p>
         <div className="flex flex-row justify-center">
           <Button type="submit" className="w-full">
             Generate rectangles

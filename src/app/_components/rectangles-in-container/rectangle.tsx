@@ -1,19 +1,19 @@
+import { Point } from "@types";
+
 export interface RectangleProps {
-  x: number;
-  y: number;
-  width: number;
-  height: number;
+  bottomLeft: Point;
+  topRight: Point;
 }
 
-export const Rectangle = ({ x, y, width, height }: RectangleProps) => {
+export const Rectangle = ({ bottomLeft, topRight }: RectangleProps) => {
   return (
     <div
       className="absolute border border-blue-500 bg-blue-200"
       style={{
-        left: x,
-        top: y,
-        width,
-        height,
+        left: bottomLeft.x * 20,
+        bottom: bottomLeft.y * 20,
+        width: (topRight.x - bottomLeft.x) * 20,
+        height: (topRight.y - bottomLeft.y) * 20,
       }}
     />
   );
